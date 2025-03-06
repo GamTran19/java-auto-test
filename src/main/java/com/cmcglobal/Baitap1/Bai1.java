@@ -18,7 +18,7 @@ public class Bai1 {
         System.out.println("Addition: " + (first + second));   // Cộng
         System.out.println("Subtraction: " + (first - second)); // Trừ
         System.out.println("Multiplication: " + (first * second)); // Nhân
-        System.out.println("Division: " + (first / second)); //Chia
+        System.out.println("Division: " + ((double) first / second)); //Chia
 
 
     }
