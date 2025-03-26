@@ -1,4 +1,4 @@
-package com.cmcglobal.Baitap1;
+package com.cmcglobal.Exercise.Baitap1;
 
 import java.util.Scanner;
 

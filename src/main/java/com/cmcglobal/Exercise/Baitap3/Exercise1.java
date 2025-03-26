@@ -1,4 +1,4 @@
-package com.cmcglobal.Baitap3;
+package com.cmcglobal.Exercise.Baitap3;
 
 public class Exercise1 {
 
@@ -6,6 +6,7 @@ public class Exercise1 {
         // Exercise:  Library Management System with Access Modifiers
         // Tạo thư viện
         Library library = new Library();
+
 
         // Thêm sách vào thư viện
         library.addBook(new Book("Tây Du Kí", "Ngô Thừa Ân", "123"));

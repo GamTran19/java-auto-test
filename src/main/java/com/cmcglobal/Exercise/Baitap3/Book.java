@@ -1,4 +1,4 @@
-package com.cmcglobal.Baitap3;
+package com.cmcglobal.Exercise.Baitap3;
 
 public class Book {
     // Phạm vi truy cập private chỉ truy cập được trong class
@@ -15,28 +15,17 @@ public class Book {
         this.isAvailable = true; // Mặc định sách có sẵn khi thêm mới
     }
 
+    //Các phương thức getter để lấy giá trị title, author, isbn, và isAvailable (public).
     public String getTitle() {
         return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
     public String getIsbn() {
         return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
     }
 
     // Method kiểm tra xem còn sách có sẵn hay không
@@ -44,9 +33,6 @@ public class Book {
         return isAvailable;
     }
 
-    public void setAvailable(boolean available) {
-        isAvailable = available;
-    }
 
     // Method hiển thị thông tin chi tiết của sách
     public void displayBookDetails() {
@@ -56,6 +42,8 @@ public class Book {
         System.out.println("Trạng thái: " + (isAvailable ? "Có sẵn" : "Đã mượn"));
         System.out.println("-----------------------");
     }
+
+
 
     // Mượn sách
     public void borrowBook() {
