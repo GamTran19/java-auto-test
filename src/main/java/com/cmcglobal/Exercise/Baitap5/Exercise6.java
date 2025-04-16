@@ -1,4 +1,4 @@
-package com.cmcglobal.Exercise.Baitap6;
+package com.cmcglobal.Exercise.Baitap5;
 
 public class Exercise6 {
     public static void main(String[] arg) {

@@ -1,4 +1,4 @@
-package com.cmcglobal.Exercise.Baitap7;
+package com.cmcglobal.Exercise.Baitap6;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,4 +1,4 @@
-package com.cmcglobal.Exercise.Baitap3;
+package com.cmcglobal.Exercise.Baitap4;
 
 public class Book {
     // Phạm vi truy cập private chỉ truy cập được trong class

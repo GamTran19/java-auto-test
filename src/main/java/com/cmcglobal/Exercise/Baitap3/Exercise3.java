@@ -1,4 +1,4 @@
-package com.cmcglobal.Exercise.Baitap2;
+package com.cmcglobal.Exercise.Baitap3;
 
 import java.util.Random;
 import java.util.Scanner;

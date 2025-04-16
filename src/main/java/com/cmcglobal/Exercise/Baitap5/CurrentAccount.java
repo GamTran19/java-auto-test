@@ -1,4 +1,4 @@
-package com.cmcglobal.Exercise.Baitap6;
+package com.cmcglobal.Exercise.Baitap5;
 
 class CurrentAccount extends BankAccount implements Transaction {
 

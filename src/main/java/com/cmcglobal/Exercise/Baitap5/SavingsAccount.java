@@ -1,4 +1,4 @@
-package com.cmcglobal.Exercise.Baitap6;
+package com.cmcglobal.Exercise.Baitap5;
 
 public class SavingsAccount extends BankAccount implements Transaction {
     public SavingsAccount(String accountHolder, double balance) {

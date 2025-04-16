@@ -1,75 +1,59 @@
 package com.cmcglobal.Exercise.Baitap3;
-import java.util.Scanner;
+
 public class Exercise1 {
-
     public static void main(String[] arg) {
-        Scanner scanner = new Scanner(System.in);
-        // Exercise:  Library Management System with Access Modifiers
-        // Tạo thư viện
-        Library library = new Library();
-
-
-        // Thêm sách vào thư viện
-        library.addBook(new Book("Tây Du Kí", "Ngô Thừa Ân", "123"));
-        library.addBook(new Book("One Piece", "Eiichiro Oda", "456"));
-        library.addBook(new Book("Naruto", "Masashi Kishimoto", "789"));
-
-        // Hiển thị danh sách sách
-        System.out.println("\n");
-        library.displayAllBooks();
-
-        // Mượn sách
-        System.out.println("\n--- Mượn sách ---");
-        library.borrowBook("123");
-        library.borrowBook("123"); // Thử mượn lại sách đã mượn
-
-
-        // Hiển thị danh sách sách
-        System.out.println("\n");
-        library.displayAllBooks();
-
-        // Trả sách
-        System.out.println("\n--- Trả sách ---");
-        library.returnBook("123");
-
-        // Hiển thị danh sách sách
-        System.out.println("\n");
-        library.displayAllBooks();
-
-        // Tìm kiếm sách
-        System.out.println("\n--- Tìm kiếm sách ---");
-        library.searchBook("One Piece");
-
-        // Tìm kiếm theo tên tác giả
-        System.out.println("\n");
-        library.searchBook("Ngô Thừa Ân");
-
-        // Xóa sách
-        System.out.println("\n--- Xóa sách ---");
-        library.removeBook("456");
-
-        // Hiển thị danh sách sau khi xóa
-        System.out.println("\n--- Danh sách sau khi xóa sách ---");
-        library.displayAllBooks();
-
-//        // Mượn sách
-//        System.out.print("\nNhập ISBN sách muốn mượn: ");
-//        String borrowIsbn = scanner.nextLine();
-//        library.borrowBook(borrowIsbn);
+        //cách 1
+//        for (int i = 1; i <= 100; i++){
 //
-//        // Trả sách
-//        System.out.print("\nNhập ISBN sách muốn trả: ");
-//        String returnIsbn = scanner.nextLine();
-//        library.returnBook(returnIsbn);
+//            switch (1) { // truyền số 1 để vòng lặp for luôn check case 1 trước
+//                case 1    :
+//                    if (i % 3 == 0 && i % 5 == 0) {
+//                        System.out.println("FizzBuzz");
+//                        break;
+//                    }
+//                    // nếu không chia hết cho 3 và 5 thì sẽ chạy tiếp case 2
+//                case 2:
+//                    if (i % 3 == 0) {
+//                        System.out.println("Fizz");
+//                        break;
+//                    }
+//                    // tương tự nếu không chia hết cho 3 thì sẽ chạy tiếp case 3
+//                case 3:
+//                    if (i % 5 == 0) {
+//                        System.out.println("Buzz");
+//                        break;
+//                    }
+//                default: //mặc định nếu không úng các TH trên thì in ra default là i
+//                    System.out.println(i);
+//                    break;
+//            }
 //
-//        // Tìm sách
-//        System.out.print("\nNhập tiêu đề hoặc tác giả cần tìm: ");
-//        String keyword = scanner.nextLine();
-//        library.searchBook(keyword);
-//
-//        // Hiển thị lại toàn bộ sách
-//        System.out.println();
-//        library.displayAllBooks();
+//            // Nếu không phải bội số của 3 hoặc 5, in chính số đó
+//        }
+
+        // cách 2
+      for (int i = 1; i <= 100; i++){
+          String ouput = "";
+          if (i % 3 == 0) {
+              ouput += "Fizz"; // ouput = ouput + "Fizz"
+          }
+          if (i % 5 == 0) {
+              ouput += "Buzz";
+          }
+          switch (ouput){
+              case "Fizz":
+                  System.out.println("Fizz");
+                  break;
+              case "Buzz":
+                  System.out.println("Buzz");
+                  break;
+              case "FizzBuzz":
+                  System.out.println("FizzBuzz");
+                  break;
+              default:
+                  System.out.println(i);
+          }
+      }
 
     }
 }

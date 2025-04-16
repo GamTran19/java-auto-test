@@ -1,4 +1,4 @@
-package com.cmcglobal.Exercise.Baitap6;
+package com.cmcglobal.Exercise.Baitap5;
 
 // Interface định nghĩa các hành động giao dịch chung
 public interface Transaction {

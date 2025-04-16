@@ -1,4 +1,4 @@
-package com.cmcglobal.Exercise.Baitap6;
+package com.cmcglobal.Exercise.Baitap5;
 
 abstract class BankAccount {
     protected String accountHolder;  // Tên chủ tài khoản
