@@ -1,8 +1,9 @@
 package com.cmcglobal.Exercise.Baitap3;
-
+import java.util.Scanner;
 public class Exercise1 {
 
     public static void main(String[] arg) {
+        Scanner scanner = new Scanner(System.in);
         // Exercise:  Library Management System with Access Modifiers
         // Tạo thư viện
         Library library = new Library();
@@ -21,6 +22,7 @@ public class Exercise1 {
         System.out.println("\n--- Mượn sách ---");
         library.borrowBook("123");
         library.borrowBook("123"); // Thử mượn lại sách đã mượn
+
 
         // Hiển thị danh sách sách
         System.out.println("\n");
@@ -49,5 +51,25 @@ public class Exercise1 {
         // Hiển thị danh sách sau khi xóa
         System.out.println("\n--- Danh sách sau khi xóa sách ---");
         library.displayAllBooks();
+
+//        // Mượn sách
+//        System.out.print("\nNhập ISBN sách muốn mượn: ");
+//        String borrowIsbn = scanner.nextLine();
+//        library.borrowBook(borrowIsbn);
+//
+//        // Trả sách
+//        System.out.print("\nNhập ISBN sách muốn trả: ");
+//        String returnIsbn = scanner.nextLine();
+//        library.returnBook(returnIsbn);
+//
+//        // Tìm sách
+//        System.out.print("\nNhập tiêu đề hoặc tác giả cần tìm: ");
+//        String keyword = scanner.nextLine();
+//        library.searchBook(keyword);
+//
+//        // Hiển thị lại toàn bộ sách
+//        System.out.println();
+//        library.displayAllBooks();
+
     }
 }

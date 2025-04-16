@@ -9,6 +9,7 @@ abstract class BankAccount {
         this.balance = balance;
     }
 
+    // Phương thức trừu tượng bắt buộc lớp con phải ghi đè
     public abstract void withdraw(double amount);
 
     // Phương thức cụ thể để hiển thị số dư

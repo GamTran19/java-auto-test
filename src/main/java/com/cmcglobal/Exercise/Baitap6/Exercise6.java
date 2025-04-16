@@ -3,12 +3,12 @@ package com.cmcglobal.Exercise.Baitap6;
 public class Exercise6 {
     public static void main(String[] arg) {
         // Tạo tài khoản tiết kiệm
-        SavingsAccount savAcc = new SavingsAccount("Nguyễn Văn A", 1000000);
-        savAcc.displayBalance();
-        savAcc.withdraw(300000); // Hợp lệ
-        savAcc.deposit(200000);
-        savAcc.deposit(10, "USD");
-        savAcc.displayBalance();
+        SavingsAccount saveAcc = new SavingsAccount("Nguyễn Văn A", 1000000);
+        saveAcc.displayBalance();
+        saveAcc.withdraw(300000); // Hợp lệ
+        saveAcc.deposit(200000);
+        saveAcc.deposit(10, "USD");
+        saveAcc.displayBalance();
 
         System.out.println();
 

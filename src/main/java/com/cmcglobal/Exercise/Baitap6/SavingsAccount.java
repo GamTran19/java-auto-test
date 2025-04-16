@@ -5,6 +5,7 @@ public class SavingsAccount extends BankAccount implements Transaction {
         super(accountHolder, balance);
     }
 
+
     // Rút tiền: chỉ cho phép rút nếu số dư còn >= 50000
     @Override
     public void withdraw(double amount) {
@@ -15,6 +16,7 @@ public class SavingsAccount extends BankAccount implements Transaction {
             System.out.println("Không đủ số dư tối thiểu (>= 50,000 VND). Rút thất bại.");
         }
     }
+
 
     // Ghi đè phương thức của interface
     @Override
