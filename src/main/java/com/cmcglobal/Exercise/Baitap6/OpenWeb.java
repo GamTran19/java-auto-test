@@ -16,6 +16,7 @@ public class OpenWeb {
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Browser drivers\\chromedriver.exe");
 
+        // Cấu hình cho chrome không hiện thị pop up cảnh báo password
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito"); // cài chế độ ẩn danh
         options.addArguments("--disable-notifications");
@@ -31,7 +32,6 @@ public class OpenWeb {
         prefs.put("profile.password_manager_enabled", false);
 
         driver = new ChromeDriver(options); // Khởi chạy trình duyệt Chrome
-
         driver.get("https://www.saucedemo.com"); // Truy cập trang web
     }
 
