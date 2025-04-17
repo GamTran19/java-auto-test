@@ -14,9 +14,24 @@ public class OpenWeb {
 
     @BeforeEach
     public void setUp() {
-        offPopupAutoPassword();
-        driver = new ChromeDriver(); // Khởi chạy trình duyệt Chrome
-        driver.manage().window().maximize();
+        System.setProperty("webdriver.chrome.driver", "C:\\Browser drivers\\chromedriver.exe");
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--incognito"); // cài chế độ ẩn danh
+        options.addArguments("--disable-notifications");
+        options.addArguments("--disable-save-password-bubble");
+
+        options.setExperimentalOption("prefs", new HashMap<>() {{
+            put("credentials_enable_service", false);
+            put("profile.password_manager_enabled", false);
+        }});
+
+        Map<String, Boolean> prefs = new HashMap<>();
+        prefs.put("credentials_enable_service", false);
+        prefs.put("profile.password_manager_enabled", false);
+
+        driver = new ChromeDriver(options); // Khởi chạy trình duyệt Chrome
+
         driver.get("https://www.saucedemo.com"); // Truy cập trang web
     }
 
@@ -27,16 +42,4 @@ public class OpenWeb {
         }
     }
 
-    public void offPopupAutoPassword() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
-        options.addArguments("--disable-web-security");
-        options.addArguments("--no-proxy-server");
-
-        Map prefs = new HashMap();
-        prefs.put("credentials_enable_service", false);
-        prefs.put("profile.password_manager_enabled", false);
-
-        options.setExperimentalOption("prefs", prefs);
-    }
 }

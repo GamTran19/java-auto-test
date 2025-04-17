@@ -11,10 +11,6 @@ public class Checkout extends OpenWeb {
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
 
-//        List<WebElement> addToCartButtons = driver.findElements(By.cssSelector(".inventory_item button"));// Thêm sản phẩm đầu tiên
-//        addToCartButtons.get(0).click();
-//        addToCartButtons.get(4).click();
-
         driver.findElement(By.cssSelector(".inventory_item button")).click(); // Thêm sản phẩm đầu tiên
         driver.findElement(By.className("shopping_cart_link")).click();
         driver.findElement(By.id("checkout")).click();
