@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class OpenWeb {
     protected WebDriver driver;
@@ -28,11 +29,14 @@ public class OpenWeb {
 
     public void offPopupAutoPassword() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-save-password-bubble");
-        options.addArguments("--disable-infobars");
-        options.setExperimentalOption("prefs", new HashMap() {{
-            put("credentials_enable_service", false);
-            put("profile.password_manager_enabled", false);
-        }});
+        options.addArguments("--start-maximized");
+        options.addArguments("--disable-web-security");
+        options.addArguments("--no-proxy-server");
+
+        Map prefs = new HashMap();
+        prefs.put("credentials_enable_service", false);
+        prefs.put("profile.password_manager_enabled", false);
+
+        options.setExperimentalOption("prefs", prefs);
     }
 }

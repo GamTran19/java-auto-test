@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LoginTest extends OpenWeb {
     @Test
-    public void loginWithValidCredentials_shouldSucceed() {
+    public void loginSuccess() {
         // Nhập username và password hợp lệ
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
@@ -18,7 +18,7 @@ public class LoginTest extends OpenWeb {
     }
 
     @Test
-    public void loginWithInvalidCredentials_shouldFail() {
+    public void loginFail() {
         driver.findElement(By.id("user-name")).sendKeys("locked_out_user");
         driver.findElement(By.id("password")).sendKeys("wrong_pass");
         driver.findElement(By.id("login-button")).click();

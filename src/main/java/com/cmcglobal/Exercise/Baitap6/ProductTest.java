@@ -18,7 +18,7 @@ public class ProductTest extends OpenWeb{
     }
 
     @Test
-    public void allProductsShouldBeDisplayed() {
+    public void allProducts() {
         login();
         List<WebElement> products = driver.findElements(By.className("inventory_item"));
         assertEquals(6, products.size()); // Có đúng 6 sản phẩm?
