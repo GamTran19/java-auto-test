@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Dropdown extends OpenWeb{
+public class Dropdown3 extends OpenWeb{
     @Test
     public void selectOption1_shouldBeSelected() {
         driver.get("https://the-internet.herokuapp.com/dropdown");

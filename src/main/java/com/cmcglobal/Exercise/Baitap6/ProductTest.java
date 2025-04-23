@@ -17,6 +17,7 @@ public class ProductTest extends OpenWeb{
         driver.findElement(By.id("login-button")).click();
     }
 
+
     @Test
     public void allProducts() {
         login();
