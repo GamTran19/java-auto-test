@@ -1,28 +1,29 @@
-package com.cmcglobal.Exercise.BaiTap9.Main;
+package com.cmcglobal.Exercise.BaiTap9.pages;
 
+import com.cmcglobal.Exercise.BaiTap9.pages.base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
+public class PIMPage extends BasePage {
 
-public class PIMPage {
-
-    private WebDriver driver;
-    private WebDriverWait wait;
 
     // Định nghĩa các phần tử
-    private By pimMenu = By.xpath("//span[text()='PIM']");
-    private By employeeNameField = By.xpath("//input[@placeholder='Type for hints...']");
-    private By searchButton = By.xpath("//button[@type='submit']");
-    private By resultTable = By.cssSelector(".orangehrm-container");
+    private final By pimMenu = By.xpath("//span[text()='PIM']");
+    private final By employeeNameField = By.xpath("//input[@placeholder='Type for hints...']");
+    private final By searchButton = By.xpath("//button[@type='submit']");
+    private final By resultTable = By.cssSelector(".orangehrm-container");
+
+    private final By addButton = By.xpath("//button[normalize-space()='Add']");
+    private final By firstNameInput = By.name("firstName");
+    private final By lastNameInput = By.name("lastName");
+    private final By saveButton = By.xpath("//button[normalize-space()='Save']");
+    private final By personalDetailsHeader = By.xpath("//h6[text()='Personal Details']");
 
     // Constructor
     public PIMPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        super(driver);
     }
 
     // Điều hướng vào mục PIM
@@ -54,5 +55,22 @@ public class PIMPage {
     // Kiểm tra có hiển thị kết quả bảng danh sách nhân viên không
     public boolean isSearchResultVisible() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(resultTable)).isDisplayed();
+    }
+
+    public void clickAddButton() {
+        click(addButton);
+    }
+
+    public void fillEmployeeForm(String firstName, String lastName) {
+        type(firstNameInput, firstName);
+        type(lastNameInput, lastName);
+    }
+
+    public void clickSave() {
+        click(saveButton);
+    }
+
+    public boolean isPersonalDetailsPage() {
+        return isDisplayed(personalDetailsHeader);
     }
 }
